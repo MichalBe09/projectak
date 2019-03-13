@@ -12,6 +12,7 @@ public class SpringExampleData implements CommandLineRunner {
 
     @Autowired
     private TestRepository testRepository;
+
     @Override
     public void run(String... args) throws Exception {
         System.out.println("Hello");
@@ -19,7 +20,7 @@ public class SpringExampleData implements CommandLineRunner {
 
         test.addQuestion(new Question("Czy java ma klasy ?", true));
         test.addQuestion(new Question("Czy java ma intejfejsy ?", true));
-        test.addQuestion(new Question("Czy java ma klase Integer ?", false));
+        test.addQuestion(new Question("Czy java ma klase integer ?", false));
         test.addQuestion(new Question("Czy java ma destruktor ?", false));
         testRepository.save(test);
     }

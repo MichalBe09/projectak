@@ -19,7 +19,7 @@ public class Test {
     }
 
     //nazwa klucza obcego po drugiej stronie
-    @OneToMany(mappedBy = "test")
+    @OneToMany(mappedBy = "test",cascade = CascadeType.ALL)
     private List<Question> questionList = new ArrayList<>();
 
 
